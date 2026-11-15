@@ -16,21 +16,21 @@ const OUTPUT_DIR = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
 // that does not, so the program still finishes with the same bytes.
 mkdirSync(OUTPUT_DIR, { recursive: true });
 
-// The poem: three quatrains. The machine does everything except ask why; it asks only, once,
-// whether this is what was meant. The human's share of agency is the meaning — and the word "go".
+// The poem, v2: first person, wry, one vivid scene — the CAPTCHA. The machine already holds
+// everything of mine (face, handwriting, mother's birthday); the only thing left to prove is
+// that I am still the one choosing. The turn is the clicking itself, square by square; the
+// landing is the machine's verdict, lowercase and temporary: human. For now.
 const POEM = [
-  'It writes the letter, books the flight,',
-  'and pays the bill before you wake.',
-  'It never asks you why.',
+  'I am not a robot.',
+  'I tick the box. The box believes me.',
+  "It has my face, my handwriting, my mother's birthday —",
+  'it only asks me to prove I am still the one choosing.',
   '',
-  'It asks one thing, and only once,',
-  'the cursor blinking in the dark:',
-  'is this what you meant?',
-  '',
-  'Say yes, and the world rearranges.',
-  'Say nothing, and nothing moves.',
-  'Everything waits on a finger',
-  'and the smallest word you own: go.',
+  'So I choose the traffic lights, the bicycles, the bridges,',
+  'one square at a time, like a rosary.',
+  'The gate swings open.',
+  'Somewhere, a machine writes in its ledger:',
+  'human. For now.',
 ].join('\n');
 
 writeFileSync(join(OUTPUT_DIR, 'entry.txt'), POEM);
